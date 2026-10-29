@@ -1,0 +1,6 @@
+(Home page)
+
+-------------------------------------------------------------------------------
+Logo    Home | Catalogue | Movie Details
+
+Welcome message

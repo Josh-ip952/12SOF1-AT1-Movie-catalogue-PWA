@@ -1,3 +1,35 @@
-.logo {
-    width: 20%
+* {
+    text-decoration: none;
+}
+
+.navbar {
+    background-color: #032541;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.banner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo a {
+    font-size: 36px;
+    font-weight: 600;
+    color: white;
+    width: 30%
+}
+
+li {
+    list-style: none;
+    display: inline-block;
+}
+
+li a {
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    margin-right: 25px;
 }

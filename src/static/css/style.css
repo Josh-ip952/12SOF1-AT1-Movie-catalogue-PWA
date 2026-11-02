@@ -1,5 +1,6 @@
 * {
     text-decoration: none;
+    box-sizing: border-box;
 }
 
 .navbar {
@@ -33,3 +34,34 @@ li a {
     font-weight: bold;
     margin-right: 25px;
 }
+
+/* Following code inspired and modified from 
+https://www.w3schools.com/howto/howto_css_column_cards.asp */
+
+.favourite-movie-row {  
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 30px;
+    padding: 25px; /* From the top*/
+    max-width: 100%;
+}
+
+.movie-card {
+    width: 200px;
+    height: 300px;
+}
+
+/* Movie card elements (pictures of movie with hyperlinks */
+.movie-card:nth-child(1) {
+    background-color: #032541;
+}
+
+.movie-card:nth-child(2) {
+    background-color: #3498DB;
+}
+
+.movie-card:nth-child(3) {
+    background-color: #27AE60;
+}
+
+/* End of https://www.w3schools.com/howto/howto_css_column_cards.asp*/

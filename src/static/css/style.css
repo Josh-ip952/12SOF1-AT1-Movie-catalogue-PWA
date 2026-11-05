@@ -136,12 +136,12 @@ https://www.w3schools.com/howto/howto_css_column_cards.asp */
     float: right;
     padding: 6px;
     border: none;  
-    
+    margin-top: 8px;
     margin-right: 16px;
     font-size: 17px;
 }
 
 .dropdown {
-    position:relative;
+    position: absolute;
 }
 

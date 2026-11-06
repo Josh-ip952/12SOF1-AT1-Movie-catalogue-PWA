@@ -129,19 +129,19 @@ https://www.w3schools.com/howto/howto_css_column_cards.asp */
 .query-bar {
     align-items: center;
     gap: 20px;
-    padding: 8 20px;
     display: flex;
-}
-
-.query-bar-text h4 {
-    margin: 0;
-}
-
-.query-bar-container {
     width: 100%;
     height: 50px;
     background-color: lightskyblue;
 }
+
+.query-bar h4 {
+    margin-left: 20px;
+    display: flex;
+    gap: 50px;
+    color: #032541;
+}
+
 
 /* Styles for 'query-bar input', 'dropdown', 'filter' are retrieved and modified
     from https://www.w3schools.com/howto/howto_css_searchbar.asp 
@@ -149,27 +149,22 @@ https://www.w3schools.com/howto/howto_css_column_cards.asp */
 
 .query-bar input {
     margin-left: auto;
+    margin-right: 20px;
     padding: 6px;
     border: none;  
     font-size: 17px;
-    margin-top: 8px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); 
 }
 
-.dropdown {
-    position: absolute;
-    background-color: white;
-    padding: 6px;
-    border: none;  
-    margin-top: 8px;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 17px;
-    min-width: 130px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);   
-}
 
 .filter {
-    position: absolute;
+    position: relative;
     background-color: white;
     min-width: 130px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); 
+    padding: 6px;
+    border: none;  
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 17px;
+    min-width: 130px;
 }

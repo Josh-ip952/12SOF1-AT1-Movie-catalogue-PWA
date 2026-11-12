@@ -34,6 +34,3 @@ VALUES
 (23, "Skyfall", 2012, 92),
 (24, "Spectre", 2015, 63),
 (25, "No Time to Die", 2021, 83);
-
-SELECT *
-FROM Movies;

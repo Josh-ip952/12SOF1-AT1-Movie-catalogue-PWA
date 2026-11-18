@@ -18,6 +18,7 @@ def index():
 #----------------------------------------------------------------------------------------
 '''
 
+
 def init_db():
     with open('./src/sql/setup.sql', 'r') as sql_file:
         sql_script = sql_file.read()
@@ -27,15 +28,27 @@ def init_db():
         cursor.executescript(sql_script)
 
 # Show the initial page
+
+
 @app.route('/')
 def main():
-    return render_template('catalogue.html')
+    with sqlite3.connect(DATABASE) as connection:
+        cursor = connection.cursor()
+        cursor.execute(
+            "SELECT * FROM Movies")
+        movies = cursor.fetchall()
+        print(cursor.fetchall())
+
+    return render_template('catalogue.html', movies=movies)
 
 # Handle dropdown menu requests from html
-@app.route('/', methods = ['POST'])
+
+
+@app.route('/', methods=['GET', 'POST'])
 def catalogue():
-    pass # WORK FROM HERE. Need to link dropdown menu requests to sqlite3
+    if request.method == 'POST':
+        pass
 
 
 if __name__ == '__main__':
-    app.run()
+    app.run(debug=True)  # !!! CHANGE BEFORE RELEASING

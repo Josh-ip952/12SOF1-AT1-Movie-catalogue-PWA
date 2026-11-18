@@ -108,21 +108,6 @@ https://www.w3schools.com/howto/howto_css_column_cards.asp */
     height: 300px;
 }
 
-/* Movie card elements (pictures of movie with hyperlinks */
-.movie-card:nth-child(1) {
-    background-color: #032541;
-}
-
-.movie-card:nth-child(2) {
-    background-color: #3498DB;
-}
-
-.movie-card:nth-child(3) {
-    background-color: #27AE60;
-}
-
-/* End of https://www.w3schools.com/howto/howto_css_column_cards.asp*/
-
 
 /* CSS for catalogue.html below*/
 
@@ -151,9 +136,9 @@ https://www.w3schools.com/howto/howto_css_column_cards.asp */
     margin-left: auto;
     margin-right: 20px;
     padding: 6px;
-    border: none;  
+    border: none;
     font-size: 17px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); 
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
 }
 
 
@@ -161,9 +146,9 @@ https://www.w3schools.com/howto/howto_css_column_cards.asp */
     position: relative;
     background-color: white;
     min-width: 130px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); 
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     padding: 6px;
-    border: none;  
+    border: none;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 17px;
     min-width: 130px;

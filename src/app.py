@@ -51,10 +51,22 @@ def catalogue():
             selected_year = request.form.get('year')
             selected_rating = request.form.get('rating')
 
-
-            cursor.execute("SELECT * FROM Movies WHERE Year = ? AND Rating = ?", (selected_year, selected_rating))
+            if selected_rating == "Best_to_worst":
+                print(selected_rating)
+                selected_rating = "DESC"
+            elif selected_rating == "Worst_to_best":
+                print(selected_rating)
+                selected_rating = "ASC"
+            cursor.execute(
+                f"SELECT * FROM Movies ORDER BY Rating {selected_rating}")
             movies = cursor.fetchall()
+            
 
+            return render_template('catalogue.html', movies=movies)
+        else:
+            cursor.execute(
+                "SELECT * FROM Movies")
+            movies = cursor.fetchall()
             return render_template('catalogue.html', movies=movies)
 
 

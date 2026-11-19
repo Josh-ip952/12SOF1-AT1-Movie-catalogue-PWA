@@ -27,26 +27,31 @@
 
         <h4>Sort By:</h4>
         <h4>Year</h4>
-
-        <select class="filter">
-            <option>All year</option>
-            <option>1961-1970</option>
-            <option>1971-1980</option>
-            <option>1981-1990</option>
-            <option>1991-2000</option>
-            <option>2001-2010</option>
-            <option>2011-2020</option>
-            <option>2021-2030</option>
-        </select>
-
+        <form method="POST">
+            <select class="filter" name="year" onchange="this.form.submit()">
+                <option value="All_year">All year</option>
+                <option value="1961-1970">1961-1970</option>
+                <option value="1971-1980">1971-1980</option>
+                <option value="1981-1990">1981-1990</option>
+                <option value="1991-2000">1991-2000</option>
+                <option value="2001-2010">2001-2010</option>
+                <option value="2011-2020">2011-2020</option>
+                <option value="2021-2030">2021-2030</option>
+            </select>
+        </form>
+        
         <h4>Rating</h4>
+        <form method="POST">
+            <select class="filter" name="rating" onchange="this.form.submit()">
+                <option value="Best_to_worst">Best to worst</option>
+                <option value="Worst_to_best">Worst to best</option>
+            </select>
+        </form>
 
-        <select class="filter">
-            <option>Best to worst</option>
-            <option>Worst to best</option>
-        </select>
-
-        <input type="text" placeholder="Search..">
+        <form method="POST">
+            <input type="text" placeholder="Search..">
+            <!-- NEED TO DEVELOP TO SEND REQUEST-->
+        </form>
 
     </div>
 

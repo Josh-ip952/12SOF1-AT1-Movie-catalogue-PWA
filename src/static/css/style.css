@@ -127,12 +127,11 @@ https://www.w3schools.com/howto/howto_css_column_cards.asp */
     color: #032541;
 }
 
-
 /* Styles for 'query-bar input', 'dropdown', 'filter' are retrieved and modified
     from https://www.w3schools.com/howto/howto_css_searchbar.asp 
     https://www.w3schools.com/css/css_dropdowns.asp accessed 5/11 */
 
-.query-bar input {
+.query-bar form input {
     margin-left: auto;
     margin-right: 20px;
     padding: 6px;

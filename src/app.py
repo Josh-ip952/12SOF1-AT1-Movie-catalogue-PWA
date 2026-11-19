@@ -34,10 +34,8 @@ def init_db():
 def main():
     with sqlite3.connect(DATABASE) as connection:
         cursor = connection.cursor()
-        cursor.execute(
-            "SELECT * FROM Movies")
+        cursor.execute("SELECT * FROM Movies")
         movies = cursor.fetchall()
-        print(cursor.fetchall())
 
     return render_template('catalogue.html', movies=movies)
 
@@ -46,8 +44,18 @@ def main():
 
 @app.route('/', methods=['GET', 'POST'])
 def catalogue():
-    if request.method == 'POST':
-        pass
+    with sqlite3.connect(DATABASE) as connection:
+        cursor = connection.cursor()
+
+        if request.method == 'POST':
+            selected_year = request.form.get('year')
+            selected_rating = request.form.get('rating')
+
+
+            cursor.execute("SELECT * FROM Movies WHERE Year = ? AND Rating = ?", (selected_year, selected_rating))
+            movies = cursor.fetchall()
+
+            return render_template('catalogue.html', movies=movies)
 
 
 if __name__ == '__main__':

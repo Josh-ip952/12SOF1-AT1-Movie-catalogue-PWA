@@ -51,14 +51,23 @@ def catalogue():
             selected_year = request.form.get('year')
             selected_rating = request.form.get('rating')
 
-            if selected_rating == "Best_to_worst":
-                print(selected_rating)
-                selected_rating = "DESC"
-            elif selected_rating == "Worst_to_best":
-                print(selected_rating)
+           # Year Logic, for SQL
+            if selected_year == "1961-1970":
+                year_start = 1961
+                year_end = 1970
+            else:
+                year_start = 0
+                year_end = 3000
+           
+            # Rating Logic, for SQL
+            if selected_rating == "Worst_to_best":
                 selected_rating = "ASC"
+            else:
+                selected_rating = "DESC" # Best to worst by default
+                   
+
             cursor.execute(
-                f"SELECT * FROM Movies ORDER BY Rating {selected_rating}")
+                f"SELECT * FROM Movies WHERE Year BETWEEN {year_start} AND {year_end} ORDER BY Rating {selected_rating};")
             movies = cursor.fetchall()
             
 

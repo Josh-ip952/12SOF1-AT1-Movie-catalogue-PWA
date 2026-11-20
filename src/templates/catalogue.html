@@ -28,7 +28,8 @@
         <h4>Sort By:</h4>
         <h4>Year</h4>
         <form method="POST">
-            <select class="filter" name="year" onchange="this.form.submit()">
+            <select class="filter" name="year">
+                <option value="Select_Year">-Select Year-</option>
                 <option value="All_year">All year</option>
                 <option value="1961-1970">1961-1970</option>
                 <option value="1971-1980">1971-1980</option>
@@ -42,10 +43,12 @@
         
         <h4>Rating</h4>
         <form method="POST">
-            <select class="filter" name="rating" onchange="this.form.submit()">
+            <select class="filter" name="rating">
+                <option value="Select_Rating">-Select Rating-</option>
                 <option value="Best_to_worst">Best to worst</option>
                 <option value="Worst_to_best">Worst to best</option>
             </select>
+            <button class="search-button">Search</button>
         </form>
 
         <form method="POST">
